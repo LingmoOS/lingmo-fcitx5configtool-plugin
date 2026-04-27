@@ -1,0 +1,50 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: deepin-fcitx5configtool-plugin
+Upstream-Contact: Deepin Technology Co., Ltd.
+Source: https://github.com/linuxdeepin/deepin-fcitx5configtool-plugin
+
+# ci
+Files: .github/* .gitlab-ci.yml .obs/workflows.yml
+Copyright: None
+License: CC0-1.0
+
+# Packaging configuration
+Files: rpm/* debian/* archlinux/*
+Copyright: None
+License: CC0-1.0
+
+# Project file
+Files: CMakeLists.txt */CMakeLists.txt *.cmake .gitignore
+Copyright: None
+License: CC0-1.0
+
+# README & DOC
+Files: *.md
+Copyright: Deepin Technology Co., Ltd.
+License: CC-BY-4.0
+
+# desktop
+Files: *.desktop *.desktop.in
+Copyright: None
+License: CC0-1.0
+
+# translation
+Files: *.ts *.po *.pot **/LINGUAS
+Copyright: Deepin Technology Co., Ltd.
+License: GPL-3.0-or-later
+
+# xml yaml toml json conf policy
+Files: *.ui *.qrc *.json *.conf **/config .tx/*.yaml
+Copyright: None
+License: CC0-1.0
+
+# png svg
+Files: *.png *.svg *.dci
+Copyright: Deepin Technology Co., Ltd.
+License: GPL-3.0-or-later
+
+# sh
+Files: *.sh
+Copyright: None
+License: CC0-1.0
+

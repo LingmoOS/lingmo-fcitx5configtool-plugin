@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# 检测当前安装的Qt版本，优先使用Qt6，否则使用Qt5
+define detect_qt_version
+ifneq (,$(shell which qmake6 2>/dev/null))
+    QT_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt6"
+else
+    QT_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt5"
+endif
+endef
+
+# 调用检测Qt版本的命令
+$(eval $(call detect_qt_version))
+
+# hardcode this if want to force build with sepecific Qt version
+# QT_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt5"
+
+%:
+	dh $@ --parallel
+
+UOS_SYSTEM := $(shell lsb_release -i -s 2>/dev/null | grep -i uos | wc -l | tr -d ' ')
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DENABLE_KCM=Off \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DQT_DIR=$(QT_DIR) \
+	$(if $(filter 1,$(UOS_SYSTEM)),-DBUILD_UOS=ON,)
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
+override_dh_missing:
+	dh_missing --list-missing
+	

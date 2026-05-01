@@ -21,8 +21,8 @@
 <context>
     <name>Fcitx5ConfigPlugin</name>
     <message>
-        <source>deepin-fcitx5configtool-plugin</source>
-        <translation>deepin-fcitx5configtool-plugin</translation>
+        <source>lingmo-fcitx5configtool-plugin</source>
+        <translation>lingmo-fcitx5configtool-plugin</translation>
     </message>
     <message>
         <source>Input Method</source>

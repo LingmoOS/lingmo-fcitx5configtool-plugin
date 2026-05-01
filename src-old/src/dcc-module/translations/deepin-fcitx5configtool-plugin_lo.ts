@@ -21,7 +21,7 @@
 <context>
     <name>Fcitx5ConfigPlugin</name>
     <message>
-        <source>deepin-fcitx5configtool-plugin</source>
+        <source>lingmo-fcitx5configtool-plugin</source>
         <translation>ສ່ວນເຕີມສຳລັບການຈັດການວິທີການປ້ອນຂໍ້ມູນ</translation>
     </message>
     <message>

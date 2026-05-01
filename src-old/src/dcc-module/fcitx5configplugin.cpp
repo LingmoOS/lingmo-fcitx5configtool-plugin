@@ -22,7 +22,7 @@ Fcitx5ConfigPlugin::Fcitx5ConfigPlugin() { }
 
 QString Fcitx5ConfigPlugin::name() const
 {
-    return tr("deepin-fcitx5configtool-plugin");
+    return tr("lingmo-fcitx5configtool-plugin");
 }
 
 QString Fcitx5ConfigPlugin::follow() const

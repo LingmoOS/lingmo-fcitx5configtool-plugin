@@ -5,6 +5,6 @@ if [ ! -d $dir ];then
 fi
 
 pushd $dir
-rm -f deepin-fcitx5configtool-plugin.ts
-lupdate ../ -ts -no-ui-lines -locations none -no-obsolete deepin-fcitx5configtool-plugin.ts
+rm -f lingmo-fcitx5configtool-plugin.ts
+lupdate ../ -ts -no-ui-lines -locations none -no-obsolete lingmo-fcitx5configtool-plugin.ts
 popd

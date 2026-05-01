@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 
-set(PLUGIN_NAME "deepin-fcitx5configtool-plugin")
+set(PLUGIN_NAME "lingmo-fcitx5configtool-plugin")
 
 project(${PLUGIN_NAME})
 

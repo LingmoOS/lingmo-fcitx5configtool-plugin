@@ -27,7 +27,7 @@
 
 Q_LOGGING_CATEGORY(configTool, "fcitx5.configtool.main")
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 
 static QString kFcitxConfigGlobalPath = "fcitx://config/global";
@@ -36,9 +36,9 @@ static const QString kSogouAddonUniqueName = "com.sogou.ime.ng.fcitx5.uos-addon"
 static const QString kSogouIMUniqueName = "com.sogou.ime.ng.fcitx5.uos";
 static const QString kSogouConfigureAppId = "com.sogou.ime.ng.fcitx5.uos.configurer";
 #else
-static const QString kSogouAddonUniqueName = "com.sogou.ime.ng.fcitx5.deepin-addon";
-static const QString kSogouIMUniqueName = "com.sogou.ime.ng.fcitx5.deepin";
-static const QString kSogouConfigureAppId = "com.sogou.ime.ng.fcitx5.deepin.configurer";
+static const QString kSogouAddonUniqueName = "com.sogou.ime.ng.fcitx5.lingmo-addon";
+static const QString kSogouIMUniqueName = "com.sogou.ime.ng.fcitx5.lingmo";
+static const QString kSogouConfigureAppId = "com.sogou.ime.ng.fcitx5.lingmo.configurer";
 #endif
 
 Fcitx5ConfigToolWorkerPrivate::Fcitx5ConfigToolWorkerPrivate(Fcitx5ConfigToolWorker *parent)
@@ -103,8 +103,8 @@ Fcitx5ConfigToolWorker::Fcitx5ConfigToolWorker(QObject *parent)
     : QObject(parent), d(new Fcitx5ConfigToolWorkerPrivate(this))
 {
     qCDebug(configTool) << "Entering Fcitx5ConfigToolWorker constructor";
-    qmlRegisterType<Fcitx5ConfigProxy>("org.deepin.dcc.fcitx5configtool", 1, 0, "Fcitx5ConfigProxy");
-    qmlRegisterType<Fcitx5AddonsProxy>("org.deepin.dcc.fcitx5configtool", 1, 0, "Fcitx5AddonsProxy");
+    qmlRegisterType<Fcitx5ConfigProxy>("org.lingmo.dcc.fcitx5configtool", 1, 0, "Fcitx5ConfigProxy");
+    qmlRegisterType<Fcitx5AddonsProxy>("org.lingmo.dcc.fcitx5configtool", 1, 0, "Fcitx5AddonsProxy");
     QMetaObject::invokeMethod(this, "init", Qt::QueuedConnection);
     qCDebug(configTool) << "Exiting Fcitx5ConfigToolWorker constructor";
 }
@@ -166,7 +166,7 @@ void Fcitx5ConfigToolWorker::openDeepinAppStore() const
     qCInfo(configTool) << "Request to open Deepin App Store.";
     DDBusSender()
             .service("org.desktopspec.ApplicationManager1")
-            .path(QStringLiteral("/org/desktopspec/ApplicationManager1/") + DUtil::escapeToObjectPath("deepin-app-store"))
+            .path(QStringLiteral("/org/desktopspec/ApplicationManager1/") + DUtil::escapeToObjectPath("lingmo-app-store"))
             .interface("org.desktopspec.ApplicationManager1.Application")
             .method("Launch")
             .arg(QString(""))
@@ -246,6 +246,6 @@ fcitx::kcm::IMProxyModel *Fcitx5ConfigToolWorker::imProxyModel() const
 
 DCC_FACTORY_CLASS(Fcitx5ConfigToolWorker)
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo
 
 #include "fcitx5configtool.moc"

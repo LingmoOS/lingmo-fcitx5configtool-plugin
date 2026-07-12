@@ -15,7 +15,7 @@ class DBusProvider;
 
 class QDBusPendingCallWatcher;
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 class Fcitx5ConfigProxyPrivate;
 class Fcitx5ConfigProxy : public QObject
@@ -51,6 +51,6 @@ private:
     Fcitx5ConfigProxyPrivate *const d;
 };
 }   // namespace fcitx5configtool
-}   // namespace deepin 
+}   // namespace lingmo
 
 #endif // !FCITX5CONFIGPROXY_H

@@ -8,7 +8,7 @@
 #include <QVariant>
 #include <QVariantMap>
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 
 class Fcitx5ConfigToolWorker : public QObject
@@ -19,6 +19,6 @@ public:
     explicit Fcitx5ConfigToolWorker(QObject *parent = nullptr);
 };
 } // namespace fcitx5configtool
-} // namespace deepin
+} // namespace lingmo
 
 #endif // FCITX5CONFIGTOOL_H

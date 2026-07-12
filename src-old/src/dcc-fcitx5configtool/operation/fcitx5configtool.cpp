@@ -12,7 +12,7 @@
 
 // #include "dccfactory.h"
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 Fcitx5ConfigToolWorker::Fcitx5ConfigToolWorker(QObject *parent)
     : QObject(parent)
@@ -22,6 +22,6 @@ Fcitx5ConfigToolWorker::Fcitx5ConfigToolWorker(QObject *parent)
 
 DCC_FACTORY_CLASS(Fcitx5ConfigToolWorker)
 } // namespace fcitx5configtool
-} // namespace deepin
+} // namespace lingmo
 
 #include "fcitx5configtool.moc"

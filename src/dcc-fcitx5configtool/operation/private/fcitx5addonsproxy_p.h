@@ -17,7 +17,7 @@ class AddonModel;
 class AddonProxyModel;
 }
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 class Fcitx5AddonsProxy;
 class Fcitx5AddonsProxyPrivate : public QObject
@@ -41,6 +41,6 @@ private:
     QList<QPair<int, QStringList>> addonEntryList;
 };
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo
 
 #endif // FCITX5ADDONSPROXY_P_H 

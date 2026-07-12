@@ -15,7 +15,7 @@ namespace fcitx::kcm {
 class DBusProvider;
 }
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 class Fcitx5ConfigProxy;
 class Fcitx5ConfigProxyPrivate : public QObject
@@ -40,6 +40,6 @@ private:
     QTimer *timer {nullptr};
 };
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo
 
 #endif // FCITX5CONFIGPROXY_P_H 

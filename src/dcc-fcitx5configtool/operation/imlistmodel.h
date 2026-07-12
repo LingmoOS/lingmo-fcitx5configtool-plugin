@@ -13,7 +13,7 @@ class FilteredIMModel;
 }
 }
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 
 struct IMItem
@@ -58,6 +58,6 @@ private:
 };
 
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo
 
 #endif   // IMLISTMODEL_H

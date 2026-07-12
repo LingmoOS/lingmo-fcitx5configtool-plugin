@@ -15,7 +15,7 @@
 
 Q_LOGGING_CATEGORY(addonsProxy, "fcitx5.configtool.addonsproxy")
 
-using namespace deepin::fcitx5configtool;
+using namespace lingmo::fcitx5configtool;
 
 Fcitx5AddonsProxyPrivate::Fcitx5AddonsProxyPrivate(Fcitx5AddonsProxy *parent, fcitx::kcm::DBusProvider *dbus)
     : q(parent), dbusprovider(dbus)

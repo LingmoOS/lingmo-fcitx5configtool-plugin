@@ -1,5 +1,5 @@
-usr/lib/*/dde-control-center
-usr/share/dde-control-center/translations/*
+usr/lib/*/lingmo-control-center
+usr/share/lingmo-control-center/translations/*
 usr/share/locale/*/LC_MESSAGES/deepin-fcitx5-configtool.mo
 usr/libexec
 usr/bin/fcitx5-helper

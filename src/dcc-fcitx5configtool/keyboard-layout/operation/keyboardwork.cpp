@@ -103,7 +103,7 @@ void KeyboardWorker::refreshLang()
 
 void KeyboardWorker::windowSwitch()
 {
-    QDBusInterface licenseInfo("com.deepin.wm",
+    QDBusInterface licenseInfo("com.lingmo.wm",
                                "/com/deepin/wm",
                                "com.deepin.wm",
                                QDBusConnection::sessionBus());
@@ -549,7 +549,7 @@ void KeyboardWorker::onPinyin()
 {
     m_letters.clear();
     m_metaDatas.clear();
-    QDBusInterface dbus_pinyin("org.deepin.dde.Pinyin1", "/org/deepin/dde/Pinyin1",
+    QDBusInterface dbus_pinyin("org.lingmo.Pinyin1", "/org/lingmo/Pinyin1",
                                "org.deepin.dde.Pinyin1");
 
     const auto &currentLayouts = m_model->kbLayout();

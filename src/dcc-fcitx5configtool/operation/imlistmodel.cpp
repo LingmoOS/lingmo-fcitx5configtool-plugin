@@ -7,7 +7,7 @@
 
 Q_LOGGING_CATEGORY(imListModel, "fcitx5.configtool.imlistmodel")
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 
 IMListModel::IMListModel(QObject *parent)
@@ -141,4 +141,4 @@ bool IMListModel::canRemove() const
 }
 
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo

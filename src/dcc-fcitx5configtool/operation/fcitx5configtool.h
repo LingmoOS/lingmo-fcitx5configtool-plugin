@@ -18,7 +18,7 @@ namespace dccV25 {
 class KeyboardController;
 }
 
-namespace deepin {
+namespace lingmo {
 namespace fcitx5configtool {
 class Fcitx5ConfigToolWorkerPrivate;
 class Fcitx5ConfigToolWorker : public QObject
@@ -54,6 +54,6 @@ private:
     Fcitx5ConfigToolWorkerPrivate *const d;
 };
 }   // namespace fcitx5configtool
-}   // namespace deepin
+}   // namespace lingmo
 
 #endif   // FCITX5CONFIGTOOL_H
